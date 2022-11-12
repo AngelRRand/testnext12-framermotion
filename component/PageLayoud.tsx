@@ -16,7 +16,7 @@ const PageLayoud: React.FC<container> = ({ children, title = 'Olanda', titleColo
           <h1 className={`${styles[titleColor]}`}>{title}</h1>
         </header>
       
-        <main>
+        <main className={styles.container}>
           {children}
         </main>
 
