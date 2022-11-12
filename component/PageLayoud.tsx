@@ -18,6 +18,7 @@ const PageLayoud: React.FC<container> = ({ children, title = 'Olanda', titleColo
       <LazyMotion features={domAnimation}>
 
         <motion.div
+          className='bg-black'
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
