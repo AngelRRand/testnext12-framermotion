@@ -4,7 +4,7 @@ import styles from '../styles/PageLayoud.module.css'
 
 
 import { container } from '../interface/types'
-import { motion } from 'framer-motion';
+import { motion, LazyMotion, domAnimation } from 'framer-motion';
 const PageLayoud: React.FC<container> = ({ children, title = 'Olanda', titleColor }) => {
   return (
     <>
@@ -15,24 +15,27 @@ const PageLayoud: React.FC<container> = ({ children, title = 'Olanda', titleColo
       </Head>
 
 
-      
-      <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { duration: 0.6, type: "spring", },
-      }}
-      exit={{ opacity: 0, transition: { duration: 0.6, delay: 0.5, type: "spring", }, }}
-      >
+      <LazyMotion features={domAnimation}>
 
-      <header>
-        <h1 className={`${styles[titleColor]}`}>{title}</h1>
-      </header>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 0.6, type: "spring", },
+          }}
+          exit={{ opacity: 0, transition: { duration: 0.6, delay: 0.5, type: "spring", }, }}
+        >
 
-      <main className={styles.container}>
-        {children}
-      </main>
-      </motion.div>
+          <header>
+            <h1 className={`${styles[titleColor]}`}>{title}</h1>
+          </header>
+
+          <main className={styles.container}>
+            {children}
+          </main>
+        </motion.div>
+
+      </LazyMotion>
 
     </>
   )
