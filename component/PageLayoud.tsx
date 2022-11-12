@@ -19,11 +19,11 @@ const PageLayoud: React.FC<container> = ({ children, title = 'Olanda', titleColo
         <motion.h1
           className={`${styles[titleColor]}`}
           initial={{ opacity: 0 }}
-          exit={{opacity: 0}}
           animate={{
             opacity: 1,
             transition: { duration: 5, type: "spring", },
           }}
+          exit={{x: -1000}}
         >
           {title}
         </motion.h1>
