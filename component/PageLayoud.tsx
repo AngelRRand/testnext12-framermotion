@@ -23,7 +23,6 @@ const PageLayoud: React.FC<container> = ({ children, title = 'Olanda', titleColo
             opacity: 1,
             transition: { duration: 5, type: "spring", },
           }}
-          exit={{x: -1000}}
         >
           {title}
         </motion.h1>
