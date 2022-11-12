@@ -1,8 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
-import { container } from '../interface/types'
 import styles from '../styles/PageLayoud.module.css'
 
+
+import { container } from '../interface/types'
+import { motion } from 'framer-motion';
 const PageLayoud: React.FC<container> = ({ children, title = 'Olanda', titleColor }) => {
   return (
     <>
@@ -12,13 +14,23 @@ const PageLayoud: React.FC<container> = ({ children, title = 'Olanda', titleColo
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <header>
-          <h1 className={`${styles[titleColor]}`}>{title}</h1>
-        </header>
-      
-        <main className={styles.container}>
-          {children}
-        </main>
+      <header>
+        
+        <motion.h1
+          className={`${styles[titleColor]}`}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 4000, type: "spring", },
+          }}
+        >
+          {title}
+        </motion.h1>
+      </header>
+
+      <main className={styles.container}>
+        {children}
+      </main>
 
     </>
   )
