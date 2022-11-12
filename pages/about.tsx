@@ -12,11 +12,11 @@ const about = () => {
           opacity: 1,
           transition: { duration: 5, type: "spring", },
         }}
-        exit={{ y: 10000 }}
+        exit={{ opacity: 0, transition: { duration: 1, type: "spring", }, }}
       >
 
-      </motion.div>
       <Link href={'/'}>Vamono al home</Link>
+      </motion.div>
     </PageLayoud>
   )
 }
