@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 import PageLayoud from '../component/PageLayoud';
-import { Articles } from '../interface/types';
+import { Articles as Props } from '../interface/types';
 
-const about: React.FC<Articles> = ({ articles }) => {
+const about: React.FC<Props> = ({ articles }) => {
   return (
     <PageLayoud title='About' titleColor='crimson'>
         <Link href={'/'}>Vamono al home</Link>
