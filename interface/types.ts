@@ -1,14 +1,18 @@
-export interface container{
+export interface container {
     children: JSX.Element | JSX.Element[]
     title: string
     titleColor: string
 }
 
-export interface Root {
+export interface Vamo {
     articles: Article[]
-  }
-  
-  export interface Article {
+}
+
+export interface Articles {
+    articles: Article[]
+}
+
+export interface Article {
     source: Source
     author: string
     title: string
@@ -17,10 +21,9 @@ export interface Root {
     urlToImage: string
     publishedAt: string
     content: string
-  }
-  
-  export interface Source {
+}
+
+export interface Source {
     id: any
     name: string
-  }
-  
+}
