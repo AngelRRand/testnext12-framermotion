@@ -3,3 +3,7 @@ export interface container{
     title: string
     titleColor: string
 }
+
+export interface Articles {
+    articles: any
+}
