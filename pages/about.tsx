@@ -1,18 +1,19 @@
 import Link from 'next/link'
 import React from 'react'
 import PageLayoud from '../component/PageLayoud';
-import { Articles } from '../interface/types';
+import { Root } from '../interface/types';
 
-const about: React.FC<Articles> = ({ articles }) => {
+const about: React.FC<Root> = ({ articles }) => {
+  console.log(articles)
   return (
     <PageLayoud title='About' titleColor='crimson'>
         <Link href={'/'}>Vamono al home</Link>
-        {articles.length > 0 && articles.map((article:any, index:any) => {
+        {/* {articles.length > 0 && articles.map((article:any, index:any) => {
           <div key={index}>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
           </div>
-        })}
+        })} */}
     </PageLayoud>
   )
 }
