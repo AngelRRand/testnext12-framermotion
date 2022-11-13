@@ -5,5 +5,10 @@ export interface container{
 }
 
 export interface Articles {
-    articles: any
+    articles: Array<ArrayContent>
 }
+
+/* export interface ArrayContent {
+    title: string
+    description: string
+} */
