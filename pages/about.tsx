@@ -7,18 +7,15 @@ const about: React.FC<Props> = ({ articles }) => {
   return (
     <PageLayoud title='About' titleColor='crimson'>
       <Link href={'/'}>Vamono al homeeeee messi</Link>
-      {articles.map((a, index) => (
+      {articles.map((article, index) => (
         <div key={index}>
-          <h2>{a.title}</h2>
-          <p>{a.description}</p>
+          <h2>{article.title}</h2>
+          <p>{article.description}</p>
         </div>
       ))}
     </PageLayoud>
   )
 }
-
-export default about
-
 
 export async function getServerSideProps() {
   const response = await fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=d36b270478c045cab6b7cb6fd094c357')
@@ -30,4 +27,5 @@ export async function getServerSideProps() {
   }
 }
 
+export default about
 
