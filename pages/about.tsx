@@ -18,14 +18,17 @@ const about: React.FC<Props> = ({ articles }) => {
   )
 }
 
-export async function getServer() {
+export default about
+
+
+export async function getServeer() {
+  console.log('asdaqdas')
   const response = await fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=d36b270478c045cab6b7cb6fd094c357')
-  const { articles } = await response.json()
+  const  articles  = await response.json()
+  console.log(articles, 'adasdas')
   return {
     props: articles
   }
 }
 
 
-
-export default about
