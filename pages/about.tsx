@@ -4,16 +4,15 @@ import PageLayoud from '../component/PageLayoud';
 import { Articles as Props } from '../interface/types';
 
 const about: React.FC<Props> = ({ articles }) => {
-  console.log(articles)
   return (
     <PageLayoud title='About' titleColor='crimson'>
       <Link href={'/'}>Vamono al homeeeee messi</Link>
-        {/* {articles.length === 0 ? <p>asfa</p> : articles.map((a, index) => (
-          <div key={index}>
-            <h2>{a.title}</h2>
-            <p>{a.description}</p>
-          </div>
-        ))} */}
+      {articles.map((a, index) => (
+        <div key={index}>
+          <h2>{a.title}</h2>
+          <p>{a.description}</p>
+        </div>
+      ))}
     </PageLayoud>
   )
 }
@@ -21,12 +20,13 @@ const about: React.FC<Props> = ({ articles }) => {
 export default about
 
 
-export async function getServeer() {
+export async function getServerSideProps() {
   const response = await fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=d36b270478c045cab6b7cb6fd094c357')
-  const  {articles}  = await response.json()
-  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+  const { articles } = await response.json()
   return {
-    props: articles
+    props: {
+      articles
+    }
   }
 }
 
