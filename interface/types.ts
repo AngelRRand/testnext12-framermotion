@@ -4,10 +4,6 @@ export interface container {
     titleColor: string
 }
 
-export interface Vamo {
-    articles: Article[]
-}
-
 export interface Articles {
     articles: Article[]
 }
