@@ -6,7 +6,7 @@ import { Articles as Props } from '../interface/types';
 const about: React.FC<Props> = ({ articles }) => {
   return (
     <PageLayoud title='About' titleColor='crimson'>
-      <Link href={'/'}>Vamono al homeeeee messi</Link>
+      <Link href={'/'}>Vamono al home</Link>
       <div>
         {articles.map((article, index) => (
           <div key={index}>
