@@ -7,12 +7,14 @@ const about: React.FC<Props> = ({ articles }) => {
   return (
     <PageLayoud title='About' titleColor='crimson'>
       <Link href={'/'}>Vamono al homeeeee messi</Link>
-      {articles.map((article, index) => (
-        <div key={index}>
-          <h2>{article.title}</h2>
-          <p>{article.description}</p>
-        </div>
-      ))}
+      <div>
+        {articles.map((article, index) => (
+          <div key={index}>
+            <h2>{article.title}</h2>
+            <p>{article.description}</p>
+          </div>
+        ))}
+      </div>
     </PageLayoud>
   )
 }
