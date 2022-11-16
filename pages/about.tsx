@@ -12,6 +12,7 @@ const about: React.FC<Props> = ({ articles }) => {
           <div key={index}>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
+            <p>{article.url}</p>
           </div>
         ))}
       </div>
