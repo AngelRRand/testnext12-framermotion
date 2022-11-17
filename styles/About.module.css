@@ -1,18 +1,28 @@
 .containerArticles {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 50vh);
-    grid-column-gap: 10px;
-    grid-row-gap: 5vh;
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: repeat(6, 50vh);
+    grid-column-gap: 100px;
+    grid-row-gap: 15vh;
 }
 .article{
     display: flex;
     flex-direction: column;
-    width: 20vw;
-    height: 20vh;
+    background: #000;
+    object-fit: contain;
+    width: auto;
+    padding: 10px;
+}
+.article h2{
+    color: white;
+    font-size: 1.2rem;
+    height: 30vh;
+}
+.article p{
+    font-size: 0.8rem;
 }
 .article img{
-    object-fit: contain;
-    width: 10vw;
-    height: 10vh;
+    object-fit: cover;
+    width: auto;
+    height: 100%;
 }
