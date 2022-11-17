@@ -1,0 +1,18 @@
+.containerArticles {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 50vh);
+    grid-column-gap: 10px;
+    grid-row-gap: 5vh;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 20vh;
+}
+.article img{
+    object-fit: contain;
+    width: 10vw;
+    height: 10vh;
+}
