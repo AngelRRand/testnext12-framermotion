@@ -1,19 +1,20 @@
 import Link from 'next/link'
 import React from 'react'
 import PageLayoud from '../component/PageLayoud';
+import styles from '../styles/About.module.css'
 import { Articles as Props } from '../interface/types';
 
 const about: React.FC<Props> = ({ articles }) => {
   return (
     <PageLayoud title='About' titleColor='crimson'>
       <Link href={'/'}>Vamono al home</Link>
-      <section>
+      <section className={styles.containerArticles}>
         {articles.length < 0 ? <p>No existen articulos</p> : articles.map((article, index) => (
-          <div key={index}>
+          <article className={styles.article} key={index}>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
-            <img src={article.url}/>
-          </div>
+            <img src={article.urlToImage}/>
+          </article>
         ))}
       </section>
     </PageLayoud>
