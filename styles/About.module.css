@@ -1,9 +1,10 @@
 .containerArticles {
     display: grid;
     grid-template-columns: repeat(2, 40vw);
-    grid-template-rows: repeat(6, 50vh);
+    grid-template-rows: repeat(5, 50vh);
     grid-column-gap: 100px;
     grid-row-gap: 15vh;
+    margin-top: 10vh;
 }
 .article{
     display: flex;
@@ -21,8 +22,14 @@
 .article p{
     font-size: 0.8rem;
 }
+.containerIMG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
 .article img{
-    object-fit: cover;
     width: 35vw;
     height: 30vh;
+    overflow: hidden;
 }

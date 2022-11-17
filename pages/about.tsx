@@ -13,7 +13,10 @@ const about: React.FC<Props> = ({ articles }) => {
           <article className={styles.article} key={index}>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
-            <img src={article.urlToImage}/>
+            <div className={styles.containerIMG}>
+              <img src={article.urlToImage} />
+
+            </div>
           </article>
         ))}
       </section>
