@@ -23,6 +23,6 @@
 }
 .article img{
     object-fit: cover;
-    width: auto;
-    height: 100%;
+    width: 35vw;
+    height: 30vh;
 }
