@@ -8,11 +8,11 @@ const about: React.FC<Props> = ({ articles }) => {
     <PageLayoud title='About' titleColor='crimson'>
       <Link href={'/'}>Vamono al home</Link>
       <div>
-        {articles.map((article, index) => (
+        {articles.length < 0 ? <p>No existen articulos</p> : articles.map((article, index) => (
           <div key={index}>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
-            <p>{article.url}</p>
+            <img src={article.url}/>
           </div>
         ))}
       </div>
