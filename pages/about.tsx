@@ -15,7 +15,13 @@ const about: React.FC<Props> = ({ articles }) => {
             <h2>{article.title}</h2>
             <p>{article.description}</p>
             <div className={styles.containerIMG}>
-              <Image alt={article.title} src={article.urlToImage} width={500} height={200}/>
+              <Image 
+              alt={article.title} 
+              src={article.urlToImage} 
+              width={500} 
+              height={200}
+              layout={'responsive'}
+              />
 
             </div>
           </article>

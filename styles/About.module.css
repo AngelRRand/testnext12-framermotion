@@ -1,23 +1,21 @@
 .containerArticles {
     display: grid;
-    grid-template-columns: repeat(2, 40vw);
-    grid-template-rows: repeat(5, 50vh);
-    grid-column-gap: 100px;
-    grid-row-gap: 15vh;
     margin-top: 10vh;
 }
 .article{
     display: flex;
     flex-direction: column;
-    background: #000;
+    background: rgb(204, 147, 147);
     object-fit: contain;
-    width: auto;
+    height: auto;
+    margin-top: 10px;
+    width: 40vw;
     padding: 10px;
 }
 .article h2{
     color: white;
     font-size: 1.2rem;
-    height: 30vh;
+    height: 10vh;
 }
 .article p{
     font-size: 0.8rem;
@@ -27,9 +25,4 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-}
-.article img{
-    width: 35vw;
-    height: 30vh;
-    overflow: hidden;
 }
