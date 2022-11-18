@@ -3,6 +3,7 @@ import React from 'react'
 import PageLayoud from '../component/PageLayoud';
 import styles from '../styles/About.module.css'
 import { Articles as Props } from '../interface/types';
+import Image from 'next/image';
 
 const about: React.FC<Props> = ({ articles }) => {
   return (
@@ -14,7 +15,7 @@ const about: React.FC<Props> = ({ articles }) => {
             <h2>{article.title}</h2>
             <p>{article.description}</p>
             <div className={styles.containerIMG}>
-              <img src={article.urlToImage} />
+              <Image alt={article.title} src={article.urlToImage} />
 
             </div>
           </article>
