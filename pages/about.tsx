@@ -8,19 +8,21 @@ import Image from 'next/image';
 const about: React.FC<Props> = ({ articles }) => {
   return (
     <PageLayoud title='About' titleColor='crimson'>
-      <Link href={'/'}>Vamono al home</Link>
+      <div>
+        <Link href={'/'}>Home</Link>
+      </div>
       <section className={styles.containerArticles}>
         {articles.length < 0 ? <p>No existen articulos</p> : articles.map((article, index) => (
           <article className={styles.article} key={index}>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
             <div className={styles.containerIMG}>
-              <Image 
-              alt={article.title} 
-              src={article.urlToImage} 
-              width={500} 
-              height={200}
-              layout={'responsive'}
+              <Image
+                alt={article.title}
+                src={article.urlToImage}
+                width={500}
+                height={200}
+                layout={'responsive'}
               />
 
             </div>
